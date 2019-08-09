@@ -1,0 +1,21 @@
+//C Program to calculate total amount to get free coffee
+#include<stdio.h>
+int main()
+{
+    int x,p,sum=0,temp=0;
+    scanf("%d%d",&x,&p);
+    if(x>=0 && x<=10000 && p>=1 && p<=100)
+    {
+    temp=x;
+    sum=x;
+    while(temp>0)
+    {
+        sum=sum+(int)(temp*((float)(100-p))/100);
+        temp=(int)(temp*((float)(100-p))/100);
+    }
+    }
+    else
+    return 0;
+    printf("%d\n",sum);
+    return 0;
+}
